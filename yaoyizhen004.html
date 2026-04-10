@@ -10,9 +10,10 @@ body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
     background: #eef2f7;
+    color: #333;
 }
 
-/* 頭部 */
+/* ===== Header ===== */
 header {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
@@ -21,13 +22,13 @@ header {
 }
 
 .profile-img {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    border: 5px solid white;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
 .profile-img:hover {
@@ -36,7 +37,7 @@ header {
 
 header h1 {
     margin: 15px 0 5px;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 header p {
@@ -44,9 +45,10 @@ header p {
     opacity: 0.9;
 }
 
+/* Button */
 button {
     margin-top: 15px;
-    padding: 10px 22px;
+    padding: 10px 20px;
     border: none;
     border-radius: 25px;
     background: white;
@@ -57,20 +59,21 @@ button {
 }
 
 button:hover {
-    background: #ddd;
+    background: #eee;
 }
 
-/* 自我介紹 */
+/* ===== Intro Box ===== */
 #introBox {
     display: none;
-    margin-top: 20px;
-    background: white;
+    margin: 20px auto 0;
+    max-width: 600px;
+    background: #fff;
     color: #333;
-    padding: 25px;
+    padding: 20px;
     border-radius: 12px;
     text-align: left;
     line-height: 1.8;
-    animation: fadeIn 0.5s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
 #introBox h3 {
@@ -78,52 +81,60 @@ button:hover {
     color: #667eea;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-/* 主體 */
+/* ===== Container ===== */
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 20px;
 }
 
+/* Section */
 .section {
     background: white;
-    margin-bottom: 20px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    margin-bottom: 18px;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    transition: 0.2s;
 }
 
 .section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .section h2 {
+    margin-top: 0;
     border-left: 5px solid #667eea;
     padding-left: 10px;
 }
 
-/* 技能 */
-.skills span {
-    display: inline-block;
-    background: #667eea;
-    color: white;
-    padding: 7px 14px;
-    border-radius: 20px;
-    margin: 5px;
-    font-size: 14px;
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-/* footer */
+.skills span {
+    background: #667eea;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* Footer */
 .footer {
     text-align: center;
     padding: 20px;
     color: #777;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -131,28 +142,18 @@ button:hover {
 <body>
 
 <header>
-    <!-- 🔥 已修正圖片路徑 -->
     <img src="./xmas-147.jpg" class="profile-img" alt="個人照片">
 
     <h1>姚宜蓁</h1>
     <p>學號：114024082</p>
 
-    <button onclick="toggleIntro()">點我查看自我介紹</button>
+    <button onclick="toggleIntro()">查看自我介紹</button>
 
     <div id="introBox">
         <h3>👤 自我介紹</h3>
-        <p>
-            我是資訊傳播系的學生，對數位內容創作與網頁設計充滿熱情，
-            並持續學習相關技術，培養自己的專業能力。
-        </p>
-        <p>
-            我具備良好的學習態度與責任感，面對問題時會主動尋找解決方法，
-            並透過不斷嘗試與修正讓自己進步。
-        </p>
-        <p>
-            同時，我也透過多元興趣提升自己的創造力與美感，
-            讓自己不只是技術導向，也具備設計與藝術的思維。
-        </p>
+        <p>我是資訊傳播系學生，對數位內容創作與網頁設計有興趣。</p>
+        <p>具備良好學習態度與責任感，會主動解決問題並持續進步。</p>
+        <p>也透過多元興趣培養創造力與美感，提升設計思維。</p>
     </div>
 </header>
 
@@ -160,15 +161,8 @@ button:hover {
 
     <div class="section">
         <h2>🎯 未來目標</h2>
-        <p>
-            希望朝向網頁設計與前端工程領域發展，
-            持續精進HTML、CSS與JavaScript技能，
-            並結合創意與設計，打造優質的使用者體驗。
-        </p>
-        <p>
-            長期目標為成為全端工程師或數位內容創作者，
-            在科技與設計之間發展自己的專業價值。
-        </p>
+        <p>希望朝向網頁設計與前端工程發展，持續精進 HTML、CSS 與 JavaScript。</p>
+        <p>長期目標成為全端工程師或數位創作者。</p>
     </div>
 
     <div class="section">
@@ -184,23 +178,17 @@ button:hover {
     <div class="section">
         <h2>🎨 興趣與專長</h2>
         <ul>
-            <li>💃 跳舞：培養節奏與表達能力</li>
-            <li>📷 攝影：提升構圖與美感</li>
-            <li>🎹 鋼琴：音樂基礎與藝術涵養</li>
-            <li>🥁 打鼓：加強節奏與專注力</li>
+            <li>💃 舞蹈：節奏與表達能力</li>
+            <li>📷 攝影：構圖與美感</li>
+            <li>🎹 鋼琴：音樂基礎</li>
+            <li>🥁 打鼓：節奏與專注力</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>💡 學習心得</h2>
-        <p>
-            在學習過程中，我逐漸理解技術與創意的結合，
-            並透過實作提升自己的能力。
-        </p>
-        <p>
-            面對困難時，我會主動查詢資料並嘗試解決，
-            也從錯誤中學習，讓自己持續進步與成長。
-        </p>
+        <p>學習過程中理解技術與創意結合的重要性。</p>
+        <p>遇到問題會查資料並嘗試解決，從錯誤中持續成長。</p>
     </div>
 
 </div>
@@ -211,8 +199,8 @@ button:hover {
 
 <script>
 function toggleIntro() {
-    let box = document.getElementById("introBox");
-    box.style.display = box.style.display === "block" ? "none" : "block";
+    const box = document.getElementById("introBox");
+    box.style.display = (box.style.display === "block") ? "none" : "block";
 }
 </script>
 
