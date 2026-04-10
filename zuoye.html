@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>姚宜蓁 個人履歷</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #eef2f7;
+}
+
+/* 頭部 */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 15px 0 5px;
+    font-size: 32px;
+}
+
+header p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #667eea;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+/* 自我介紹動畫 */
+#introBox {
+    display: none;
+    margin-top: 20px;
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* 主體 */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section h2 {
+    border-left: 5px solid #667eea;
+    padding-left: 10px;
+}
+
+/* 技能 */
+.skills span {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="photo.jpg" class="profile-img">
+
+    <h1>姚宜蓁</h1>
+    <p>學號：114024082</p>
+
+    <button onclick="toggleIntro()">點我查看自我介紹</button>
+
+    <div id="introBox">
+        我是資訊傳播系學生，對數位內容與網頁設計充滿熱情，
+        具備良好的學習能力與創造力。平時透過多元興趣培養美感與表達能力，
+        並持續精進技術，期望未來能在科技與創意結合的領域發展，
+        成為具備專業能力與設計思維的人才。
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>🎯 未來目標</h2>
+        <p>
+            希望朝向網頁設計與前端工程領域發展，
+            持續提升HTML、CSS與JavaScript能力，
+            並結合創意與設計，打造優質的使用者體驗。
+        </p>
+        <p>
+            長期目標為成為全端工程師或數位內容創作者，
+            在科技與設計之間找到屬於自己的定位。
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ 技能</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>基礎設計</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎨 興趣與專長</h2>
+        <ul>
+            <li>💃 跳舞：培養節奏與表達能力</li>
+            <li>📷 攝影：提升構圖與美感</li>
+            <li>🎹 鋼琴：音樂基礎與藝術涵養</li>
+            <li>🥁 打鼓：加強節奏與專注力</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>💡 學習心得</h2>
+        <p>
+            在學習過程中，我逐漸理解技術與創意的結合，
+            並透過不斷練習提升自己的能力。
+        </p>
+        <p>
+            面對困難時，我會主動查資料與嘗試解決，
+            也從錯誤中學習，讓自己持續成長。
+        </p>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 姚宜蓁 個人履歷
+</div>
+
+<script>
+function toggleIntro() {
+    let box = document.getElementById("introBox");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
