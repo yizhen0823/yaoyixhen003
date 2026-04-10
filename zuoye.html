@@ -27,6 +27,11 @@ header {
     object-fit: cover;
     border: 6px solid white;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
 }
 
 header h1 {
@@ -55,15 +60,22 @@ button:hover {
     background: #ddd;
 }
 
-/* 自我介紹動畫 */
+/* 自我介紹 */
 #introBox {
     display: none;
     margin-top: 20px;
     background: white;
     color: #333;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
+    text-align: left;
+    line-height: 1.8;
     animation: fadeIn 0.5s ease;
+}
+
+#introBox h3 {
+    margin-top: 0;
+    color: #667eea;
 }
 
 @keyframes fadeIn {
@@ -119,7 +131,7 @@ button:hover {
 <body>
 
 <header>
-    <img src="photo.jpg" class="profile-img">
+    <img src="IMG_5273.HEIC" class="profile-img">
 
     <h1>姚宜蓁</h1>
     <p>學號：114024082</p>
@@ -127,10 +139,19 @@ button:hover {
     <button onclick="toggleIntro()">點我查看自我介紹</button>
 
     <div id="introBox">
-        我是資訊傳播系學生，對數位內容與網頁設計充滿熱情，
-        具備良好的學習能力與創造力。平時透過多元興趣培養美感與表達能力，
-        並持續精進技術，期望未來能在科技與創意結合的領域發展，
-        成為具備專業能力與設計思維的人才。
+        <h3>👤 自我介紹</h3>
+        <p>
+            我是資訊傳播系的學生，對數位內容創作與網頁設計充滿熱情，
+            並持續學習相關技術，培養自己的專業能力。
+        </p>
+        <p>
+            我具備良好的學習態度與責任感，面對問題時會主動尋找解決方法，
+            並透過不斷嘗試與修正讓自己進步。
+        </p>
+        <p>
+            同時，我也透過多元興趣提升自己的創造力與美感，
+            讓自己不只是技術導向，也具備設計與藝術的思維。
+        </p>
     </div>
 </header>
 
@@ -140,12 +161,12 @@ button:hover {
         <h2>🎯 未來目標</h2>
         <p>
             希望朝向網頁設計與前端工程領域發展，
-            持續提升HTML、CSS與JavaScript能力，
+            持續精進HTML、CSS與JavaScript技能，
             並結合創意與設計，打造優質的使用者體驗。
         </p>
         <p>
             長期目標為成為全端工程師或數位內容創作者，
-            在科技與設計之間找到屬於自己的定位。
+            在科技與設計之間發展自己的專業價值。
         </p>
     </div>
 
@@ -173,11 +194,11 @@ button:hover {
         <h2>💡 學習心得</h2>
         <p>
             在學習過程中，我逐漸理解技術與創意的結合，
-            並透過不斷練習提升自己的能力。
+            並透過實作提升自己的能力。
         </p>
         <p>
-            面對困難時，我會主動查資料與嘗試解決，
-            也從錯誤中學習，讓自己持續成長。
+            面對困難時，我會主動查詢資料並嘗試解決，
+            也從錯誤中學習，讓自己持續進步與成長。
         </p>
     </div>
 
